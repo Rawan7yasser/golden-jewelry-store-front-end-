@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <label  for="product-photo"> <span class="material-symbols-outlined">
+            image
+            </span> </label>
+        <input  type="url"  name="img" class="img" id="product-photo" accept=".jpeg ,.png, .jpg" />
+       
+        <label  for="name">name</label>
+        <input  type="text" name="name" class="type" />
+
+        <label  for="id">ID</label>
+        <input  type="text" name="id" class="product-id" />
+
+        <label   for="price">price:  </label> 
+        <input type="text" name="price" class="price" />
+        
+        <div class="starts">Rating:</div> 
+
+        <button class="add"  style="display: flex;">
+            <p>Add Product</p>
+             <span class="material-symbols-outlined">
+            add
+        </span>
+    
+    </button>
+    <button class="delete" style="display: flex;">
+        <p>Delete Product</p>
+        <span class="material-symbols-outlined">
+           delete
+        </span>
+    </button>
+    <div class="action"></div>
+    
+    </div>
+    
+
+
+
+
+
+
+            <script  src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+            integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" >  </script>
+            <script src="./add.js"></script>
+</body>
+</html>
