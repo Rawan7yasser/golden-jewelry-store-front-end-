@@ -1,4 +1,3 @@
-
 const showMyProducts =document.querySelector('.products')
 
 
@@ -39,12 +38,14 @@ try{
         const myProducts =await axios.get(url)
         myProducts.data.map((pro)=>{
         let  productDiv = document.createElement('div')
-        productDiv.classList.add('product-my');
+        productDiv.classList.add('product-m');
         productDiv.innerHTML=`
         <iframe src="${pro.img}"  height="326" width="236" frameborder="0" scrolling="no" ></iframe>
             <div class="info-prod">
             <h2>${pro.name}</h2>
             <p class="price">price:<span>${pro.price}</span></p>
+            <button>add to car<i class="fa-solid fa-cart-shopping"></i></button>
+            <br>
             <div class="rating">
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
