@@ -10,6 +10,9 @@
 
 }
 
+h3{
+    color: #363636;
+}
 
 
 body{
@@ -38,6 +41,8 @@ body{
         top:-1000px;
         transition: 1s;
         background-color: rgba(255, 255, 255, .5);
+        left: 0px;
+        z-index: 2000;
     }
     .menu{
         display: block;
@@ -134,6 +139,7 @@ display: none;
     height: 95%;
     max-width: 95%;
     align-items: center;
+    justify-content: center;
 }
 
 
@@ -141,7 +147,7 @@ display: none;
 @media only screen and (max-width: 768px) {
     .container{
         padding: 10px;
-        height: 110vh;
+        height: 100vh;
         margin-bottom: 100px;
     
         }
@@ -209,14 +215,23 @@ li:hover::after {
 
 @media screen and (max-width:768px){
     .container.two{
-        padding: 10px;
-        height: 200vh;
+       padding: 10px;
+        height: 130vh;
         max-width: 95%;
         display: flex;
         align-items: baseline;
         flex-wrap: wrap;
         justify-content: center;
-        }
+        position: relative;
+        top: -25px;
+        left: 10px;
+    }
+    
+    .icons{
+        font-size: x-large;
+    }
+
+        
 
 
     .main{
@@ -227,31 +242,36 @@ li:hover::after {
 }
 
 .header-mane {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 15px;
-    max-width: 95%;
-    justify-content: flex-start;
-    align-content: center;
-    font-size: larger;
-    gap: 15px;
-}
+        height: 55vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+        max-width: 350px;
+        align-content: center;
+        font-size: small;
+        gap: 5px;
+        
+    
+    }
 
 .header-mane h1{
-    font-size: xx-large;
+    font-size:x-large;
+}
+
+.header-mane p{
+    max-width: 300px;
 }
 
 .video {
-    max-width:100% ;
-    height: auto;
-    justify-content: center;
-    display: flex;
-    height: 100vh;
-    margin: 10px;
-}
+   max-width: 100%;
+        height: auto;
+        justify-content: center;
+        display: flex;
+        height: 50vh;
+        margin: 10px;
+    }
+
     
 
 
@@ -277,21 +297,18 @@ li:hover::after {
     
         }
 
-        .main{
-    
-            display: flex;
-            height: 100%;
-            overflow: hidden;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: space-around;
-            transition: 1s;
-
-            align-items: center;
+    .main{
+        display: flex;
+        height: 100%;
+        overflow: hidden;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        transition: 1s;
+        align-items: center;
         }
     
     .header-mane{
-            
             height: 300px;
             display: flex;
             flex-direction: column;
@@ -301,6 +318,11 @@ li:hover::after {
             width: 400px;
             justify-content: flex-start;
     }
+    .icons{
+        font-size: xx-large;
+    }
+
+
     .video {
         max-width: 600px;
         height: auto;
@@ -331,15 +353,9 @@ li:hover::after {
 
 
 .pacifico-regular {
-    font-family: "Pacifico", cursive;
+    font-family: "Pacifico",cursive;
     font-weight: 400;
     font-style: normal;
-}
-
-
-.icons{
-    font-size: 30px;
-
 }
 
 
@@ -370,14 +386,16 @@ li:hover::after {
 }
 .product-my{
     width: 236px;
-    height: fit-content;
-    background-color: rgb(255 255 255);
-    border-radius: 3%;
-        display: flex;
-        gap: 1px;
-        flex-direction: column;
-        flex-wrap: wrap;
-        
+    max-height: 450px;
+    background-color: rgba(255, 255, 255, .9);
+    box-shadow: 1px 1px 1px 0px #0000002e;
+    /* border-radius: 3%; */
+    display: flex;
+    /* gap: 1px; */
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 20px;
+    border-radius: 15px;
         
     
 }
@@ -385,9 +403,11 @@ li:hover::after {
 
 
 .info-prod {
-    margin: 2.5px;
+    margin: 4px;
     font-size: small;
-    padding: 2.5px;
+    padding: 4px;
+    position: relative;
+    left: 5px;
 }
 
     .container.product{
@@ -398,6 +418,86 @@ li:hover::after {
         flex-direction: column;
         align-items: center;
     }
+    @media (max-width:768px){
+       
+        .rating{
+            padding: 2px 0px;
+            font-size: x-small;
+        }
+        .price {
+            font-size: large;
+            padding: 2px 0px;
+            font-weight: 300;
+        }
+     .info-prod   h3 {
+            color: #363636;
+            font-size: large;
+            padding: 2px 0px;
+        }
+
+        .info-prod  button{
+            cursor: pointer;
+            position: absolute;
+            bottom:2%;
+            right: 10%;
+            color:#363636 ;
+            font-size:small;
+
+        }
+    }
+
+    @media (min-width:768px){
+        .rating{
+            padding: 2px 0px;
+            font-size: small;
+        }
+        .price {
+            font-size:x-large;
+            font-weight: 300;
+        }
+
+        .info-prod   h3 {
+            color: #363636;
+            font-size: x-large;
+        }
+
+
+       
+        .info-prod  button{
+            cursor: pointer;
+            position: absolute;
+            bottom:2%;
+            right: 10%;
+            color:#363636 ;
+            font-size:medium;
+
+        }
+    }
+
+
+    .info-prod{
+        position: relative;
+    }
+
+    .info-prod::after{
+        content: " ";
+        width: 90%;
+        border: #dbd8d8 0.1px solid;
+        position: absolute;
+        top: 65%;
+        
+    }
+    
+    .info-prod button:hover{
+    background-color: #fff;
+    color: rgb(199 0 0);
+    border: none;
+    padding: 2px
+    }
+
+
+
+
 
 
     @media (min-width:768px){
@@ -471,20 +571,12 @@ li:hover::after {
         transform: rotate(180deg);
     }
     }
+
+
     
-.price{
-    font-size: 20px;
-}
-
-.price span{
-    font-size:16px;
-}
 
 
-.product-my{
-    margin-left: 25px;
-    gap: 10px;
-}
+
 
 
 
@@ -607,7 +699,7 @@ li:hover::after {
 
 
 .product-m{
-    max-width: 236px;
+    width: 236px;
     max-height: 450px;
     background-color: rgba(255, 255, 255, .9);
     /* border-radius: 3%; */
@@ -616,12 +708,14 @@ li:hover::after {
     flex-direction: column;
     flex-wrap: wrap;
     margin: 20px;
-    border: solid #fff 2px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px 0px #0000002e;
 }
 
 .product-m img{
     width:100%;
     height:326px;
+    border-radius: 15px;
 }
 
 
@@ -629,3 +723,7 @@ li:hover::after {
 .swiper-pagination{
     --swiper-pagination-color:rgb(199 0 0) ;
 }
+
+
+
+
